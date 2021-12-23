@@ -118,15 +118,24 @@ use mojang::BlockedServers;
 let blocked = BlockedServers::new().unwrap();
 
 // Check if server is blocked
-assert!(blocked.blocked("mc.playmc.mx"));
+assert!(blocked.is_blocked("mc.playmc.mx"));
 ```
 */
 
-mod common;
-mod mojang_error;
-mod player;
-mod server_block;
-mod stats;
+#[doc(hidden)]
+pub mod common;
+
+#[doc(hidden)]
+pub mod mojang_error;
+
+#[doc(hidden)]
+pub mod player;
+
+#[doc(hidden)]
+pub mod server_block;
+
+#[doc(hidden)]
+pub mod stats;
 
 pub use mojang_error::MojangError;
 pub use player::Player;

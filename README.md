@@ -8,7 +8,7 @@ Just add the following to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-mojang = "0.1.0"
+mojang = "0.2.0"
 ```
 
 ## 📄 Info
@@ -115,5 +115,5 @@ use mojang::BlockedServers;
 let blocked = BlockedServers::new().unwrap();
 
 // Check if server is blocked
-assert!(blocked.blocked("mc.playmc.mx"));
+assert!(blocked.is_blocked("mc.playmc.mx"));
 ```
